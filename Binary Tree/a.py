@@ -62,7 +62,7 @@ class Heap:
         self.size = self.size + 1
         self.perlocate_up(self.size)
     def printHeap(self):
-        print self.heaplist[1:]
+        print(self.heaplist[1:])
 HOrig = Heap()
 HOrig.insert(1)
 HOrig.insert(20)

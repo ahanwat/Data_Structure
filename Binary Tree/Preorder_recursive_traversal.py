@@ -5,7 +5,8 @@ class Node:
         self.left = None
         self.right = None
         self.data = data
-# Insert Node
+
+    # Insert Node
     def insert(self, data):
 
         if self.data:
@@ -22,39 +23,22 @@ class Node:
         else:
             self.data = data
 
-# Print the Tree
+    # Print the Tree
     def PrintTree(self):
         if self.left:
             self.left.PrintTree()
-        print( self.data),
+        print(self.data),
         if self.right:
             self.right.PrintTree()
 
+
 # Preorder traversal
 # Root -> Left ->Right
-    def PreorderTraversal(self, root):
-        res = []
-        if root:
-            res.append(root.data)
-            res = res + self.PreorderTraversal(root.left)
-            res = res + self.PreorderTraversal(root.right)
-        return res
-    maxData = float("-infinity")
-    def find_max_recursive(root):
-     global maxData
-     if not root:
-        return maxData
 
-     if root.get_data > maxData:
-        maxData = root.get_Data()
-
-     find_max_recursive(root.get.left())
-     find_max_recursive(root.get.right())
-     return maxData
 root = Node(27)
 root.insert(14)
 root.insert(35)
 root.insert(19)
 root.insert(31)
 root.insert(42)
-print(root.PreorderTraversal(root))
+
